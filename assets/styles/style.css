@@ -1,0 +1,30 @@
+@import "header.css";
+
+#content {
+  margin-top: 20px;
+}
+
+#copyPassword {
+  display: inline-block;
+  height: 100%;
+  width: 50px;
+}
+
+#copyPassword button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#newPassword {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  font-size: 1.5em;
+  /* bootstrap pre has a bottom margin of 10px */
+  margin: 0;
+}
+
+#newPasswordButton, #passwordTable {
+  margin: 20px 0;
+}
