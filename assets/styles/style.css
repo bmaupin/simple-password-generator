@@ -5,8 +5,6 @@
 }
 
 #copyPassword {
-  display: inline-block;
-  height: 100%;
   width: 50px;
 }
 
@@ -21,10 +19,16 @@
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   font-size: 1.5em;
+  height: 100%;
   /* bootstrap pre has a bottom margin of 10px */
   margin: 0;
 }
 
 #newPasswordButton, #passwordTable {
   margin: 20px 0;
+}
+
+#passwordTable td {
+  display: inline-block;
+  height: 100%;
 }
