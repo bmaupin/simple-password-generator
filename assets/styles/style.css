@@ -20,7 +20,7 @@
   border-top-left-radius: 0;
   font-size: 1.5em;
   height: 100%;
-  /* bootstrap pre has a bottom margin of 10px */
+  /* Bootstrap pre has a bottom margin of 10px */
   margin: 0;
 }
 
@@ -28,7 +28,29 @@
   margin: 20px 0;
 }
 
+#passwordTable {
+  /* Keep the password on one line even if it gets really long */
+  white-space: nowrap;
+}
+
 #passwordTable td {
   display: inline-block;
   height: 100%;
+}
+
+.panel-group {
+  /* Make the panel fit the content instead of using all available space */
+  display: inline-block;
+  /* Bootstrap adds a bottom margin of 20px */
+  margin: 0;
+}
+
+.panel-heading {
+  /* Use the same padding as bootstrap .btn for consistency */
+  padding: 6px 12px;
+}
+
+.panel-title {
+  /* Use the same font size as the rest of the page for consistency */
+  font-size: 14px;
 }
