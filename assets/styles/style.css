@@ -1,5 +1,9 @@
-@import "header.css";
+/* http://getbootstrap.com/components/#callout-navbar-fixed-top-padding */
+body {
+  padding-top: 70px;
+}
 
+/* Use the same padding as h1 so it matches titles on other pages */
 #content {
   margin-top: 20px;
 }
