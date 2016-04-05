@@ -32,6 +32,11 @@ body {
   margin: 20px 0;
 }
 
+#passwordOptionsTable {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
 #passwordTable {
   /* Keep the password on one line even if it gets really long */
   white-space: nowrap;
@@ -40,6 +45,10 @@ body {
 #passwordTable td {
   display: inline-block;
   height: 100%;
+}
+
+.panel-body {
+  padding: 5px;
 }
 
 .panel-group {
@@ -57,4 +66,24 @@ body {
 .panel-title {
   /* Use the same font size as the rest of the page for consistency */
   font-size: 14px;
+}
+
+.toggle-on {
+  font-size: 24px;
+  padding: 0;
+  right: 40%;
+}
+
+numberpicker .btn {
+  padding: 0;
+}
+
+numberpicker input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+numberpicker table {
+  width: 100%;
 }
