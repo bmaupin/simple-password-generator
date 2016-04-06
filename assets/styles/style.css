@@ -19,6 +19,10 @@ body {
   width: 100%;
 }
 
+#copyPassword button .glyphicon-paste {
+  font-size: 18px;
+}
+
 #newPassword {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
