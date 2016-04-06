@@ -32,9 +32,17 @@ body {
   margin: 20px 0;
 }
 
+/* Add spacing between all the cells */
 #passwordOptionsTable {
   border-collapse: separate;
   border-spacing: 10px;
+}
+
+/* Horizontally center the checkboxes */
+#passwordOptionsTable td:last-child input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #passwordTable {
@@ -82,8 +90,4 @@ numberpicker input {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-numberpicker table {
-  width: 100%;
 }

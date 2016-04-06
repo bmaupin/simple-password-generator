@@ -1,0 +1,32 @@
+/* This draws the new box over the old */
+.styled-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: -3px;
+  margin-top: -5px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+/* This draws the check */
+.styled-checkbox:checked::after {
+  color: #fff;
+  content: "\e013";
+  font-family: "Glyphicons Halflings";
+  font-size: 11px;
+  margin-left: 1px;
+  margin-top: -20px;
+  /* Makes the check appear above other elements */
+  position: absolute;
+}
+
+.styled-checkbox:checked::before {
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
