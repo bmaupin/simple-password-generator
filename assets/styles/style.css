@@ -32,6 +32,10 @@ body {
   margin: 20px 0;
 }
 
+#newPasswordButton button {
+  background-color: #4cae4c;
+}
+
 /* Add spacing between all the cells */
 #passwordOptionsTable {
   border-collapse: separate;
@@ -84,6 +88,10 @@ body {
 
 numberpicker .btn {
   padding: 0;
+}
+
+numberpicker .btn.btn-link {
+  color: #4cae4c;
 }
 
 numberpicker input {
