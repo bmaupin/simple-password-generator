@@ -58,8 +58,13 @@ body {
   white-space: nowrap;
 }
 
+#passwordTable tr {
+  height: 100%;
+}
+
 #passwordTable td {
-  display: inline-block;
+  /* Chrome needs inline-block/inline-flex and Firefox needs inline, so this seems to work for both */
+  display: -webkit-inline-flex;
   height: 100%;
 }
 
