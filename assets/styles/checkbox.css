@@ -1,34 +1,51 @@
 /* Inspired by: https://github.com/flatlogic/awesome-bootstrap-checkbox */
 
+.styled-checkbox {
+  /* Hack to fix check 1px higher in Firefox than Chrome */
+  line-height: 16px;
+}
+
+.styled-checkbox label {
+  position: absolute;
+  /* Fix annoying bug where text is selected if checkbox is double-clicked
+  http://stackoverflow.com/a/15850372/399105 */
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}
+
 /* This draws the new box over the old */
-.styled-checkbox::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-left: -3px;
-  margin-top: -5px;
+.styled-checkbox label::before {
+  background-color: #fff;
   border: 1px solid #cccccc;
   border-radius: 3px;
-  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  margin-left: 12px;
+  margin-top: -18px;
+  position: absolute;
   -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  width: 20px;
 }
 
 /* This draws the check */
-.styled-checkbox:checked::after {
+.styled-checkbox input:checked + label::after {
   color: #fff;
   content: "\e013";
   font-family: "Glyphicons Halflings";
   font-size: 11px;
-  margin-left: 1px;
-  margin-top: -20px;
+  margin-left: 16px;
+  margin-top: -16px;
   /* Makes the check appear above other elements */
   position: absolute;
 }
 
-.styled-checkbox:checked::before {
+.styled-checkbox input:checked + label::before {
   background-color: #4cae4c;
   border-color: #4cae4c;
 }
