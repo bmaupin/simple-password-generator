@@ -1,0 +1,91 @@
+---
+layout: 
+---
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script src="http://bmaupin.github.io/weighted-password-generator/weighted-passgen-0.2.0.min.js"></script>
+    <script src="http://bmaupin.github.io/angular-bootstrap-numberpicker/angular-bootstrap-numberpicker-0.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.10/dist/clipboard.min.js"></script>
+    <script src="../assets/scripts/app.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/checkbox.css">
+    <link rel="stylesheet" href="../assets/styles/passgen.css">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  </head>
+  <body>
+    {% include header.html %}
+    <div class="container" id="content" ng-controller="Controller">
+      <table id="passwordTable">
+        <tr>
+          <td id="copyPassword">
+            <button id="copyPasswordButton" class="btn" type="button" data-clipboard-target="#newPassword" tooltip="{% raw %}{{dynamicTooltip}}{% endraw %}" tooltip-placement="bottom" tooltip-trigger="mouseenter" ng-click="changeTooltip()">
+              <span class="glyphicon glyphicon-copy"></span>
+            </button>
+          </td>
+          <td>
+            <pre id="newPassword" class="form-group-lg" select-on-click>{% raw %}{{newPassword}}{% endraw %}</pre>
+          </td>
+        </tr>
+      </table>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a data-toggle="collapse" href="#collapseOne" ng-click="resizeNumberpicker()">
+                Options
+              </a>
+            </div>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+              <table id="passwordOptionsTable">
+                <tr>
+                  <td>
+                    Length
+                  </td>
+                  <td>
+                    <numberpicker default-value="16" ng-model="passwordLength" ng-change="updateLength()"></numberpicker>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Include lowercase (abc...)</td>
+                  <td class="styled-checkbox">
+                    <div>
+                      <input id="checkbox1" type="checkbox" ng-model="includeLower" ng-change="updateClasses()"><label for="checkbox1"></label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Include uppercase (ABC...)</td>
+                  <td class="styled-checkbox">
+                    <input id="checkbox2" type="checkbox" ng-model="includeUpper" ng-change="updateClasses()"><label for="checkbox2"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Include numbers (123...)</td>
+                  <td class="styled-checkbox">
+                    <input id="checkbox3" type="checkbox" ng-model="includeNumbers" ng-change="updateClasses()"><label for="checkbox3"></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Include symbols (@#$...)</td>
+                  <td class="styled-checkbox">
+                    <input id="checkbox4" type="checkbox" ng-model="includeSymbols" ng-change="updateClasses()"><label for="checkbox4"></label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="newPasswordButton">
+        <button type="button" class="btn btn-success" ng-click="generateNewPass()">New password</button>
+      </div>
+    </div>
+  </body>
+</html>
