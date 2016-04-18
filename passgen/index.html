@@ -21,18 +21,16 @@ layout:
   <body>
     {% include header.html %}
     <div class="container" id="content" ng-controller="Controller">
-      <table id="passwordTable">
-        <tr>
-          <td id="copyPassword">
+      <div class="copyPasswordRow">
+        <div id="copyPassword" class="copyPasswordCell">
             <button id="copyPasswordButton" class="btn" type="button" data-clipboard-target="#newPassword" tooltip="{% raw %}{{dynamicTooltip}}{% endraw %}" tooltip-placement="bottom" tooltip-trigger="mouseenter" ng-click="changeTooltip()">
               <span class="glyphicon glyphicon-copy"></span>
             </button>
-          </td>
-          <td>
-            <pre id="newPassword" class="form-group-lg" select-on-click>{% raw %}{{newPassword}}{% endraw %}</pre>
-          </td>
-        </tr>
-      </table>
+        </div>
+        <div class="copyPasswordCell">
+          <pre id="newPassword" class="form-group-lg" select-on-click>{% raw %}{{newPassword}}{% endraw %}</pre>
+        </div>
+      </div>
       <div class="panel-group">
         <div class="panel panel-default">
           <div class="panel-heading">

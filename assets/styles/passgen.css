@@ -3,6 +3,14 @@
   margin-top: 20px;
 }
 
+.copyPasswordRow {
+  display: flex;
+}
+
+.copyPasswordCell {
+  display: inline-flex;
+}
+
 #copyPassword {
   width: 50px;
 }
@@ -10,7 +18,6 @@
 #copyPassword button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  height: 100%;
   width: 100%;
 }
 
@@ -22,12 +29,11 @@
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   font-size: 1.5em;
-  height: 100%;
   /* Bootstrap pre has a bottom margin of 10px */
   margin: 0;
 }
 
-#newPasswordButton, #passwordTable {
+.copyPasswordRow, #newPasswordButton {
   margin: 20px 0;
 }
 
@@ -46,21 +52,6 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-#passwordTable {
-  /* Keep the password on one line even if it gets really long */
-  white-space: nowrap;
-}
-
-#passwordTable tr {
-  height: 100%;
-}
-
-#passwordTable td {
-  /* Chrome needs inline-block/inline-flex and Firefox needs inline, so this seems to work for both */
-  display: -webkit-inline-flex;
-  height: 100%;
 }
 
 .panel-body {
