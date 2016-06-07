@@ -16,6 +16,7 @@
 }
 
 #copyPassword button {
+  background-color: #ddd;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   width: 100%;
@@ -28,6 +29,7 @@
 #newPassword {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+  border-color: #ddd;
   font-size: 1.5em;
   /* Bootstrap pre has a bottom margin of 10px */
   margin: 0;
