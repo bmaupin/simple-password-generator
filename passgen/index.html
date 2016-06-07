@@ -20,7 +20,7 @@ layout:
   </head>
   <body>
     {% include header.html %}
-    <div class="container" id="content" ng-controller="Controller">
+    <div class="container" id="content" ng-controller="PasswordGeneratorController">
       <div class="copyPasswordRow">
         <div id="copyPassword" class="copyPasswordCell">
             <button id="copyPasswordButton" class="btn" type="button" data-clipboard-target="#newPassword" tooltip="{% raw %}{{dynamicTooltip}}{% endraw %}" tooltip-placement="bottom" tooltip-trigger="mouseenter" ng-click="changeTooltip()">

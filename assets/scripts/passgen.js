@@ -1,5 +1,5 @@
 angular.module('app', ['ui.bootstrap', 'angularBootstrapNumberpicker'])
-  .controller('Controller', ['$scope', function($scope) {
+  .controller('PasswordGeneratorController', ['$scope', function($scope) {
     $scope.includeLower = true;
     $scope.includeUpper = true;
     $scope.includeNumbers = true;
