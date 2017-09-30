@@ -1,6 +1,3 @@
----
-layout:
----
 <!doctype html>
 <html ng-app="app">
   <head>
@@ -9,27 +6,26 @@ layout:
     <script src="http://bmaupin.github.io/weighted-password-generator/weighted-passgen-0.2.0.min.js"></script>
     <script src="http://bmaupin.github.io/angular-bootstrap-numberpicker/angular-bootstrap-numberpicker-0.2.1.min.js"></script>
     <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.10/dist/clipboard.min.js"></script>
-    <script src="../assets/scripts/passgen.js"></script>
+    <script src="assets/scripts/passgen.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/styles/style.css">
-    <link rel="stylesheet" href="../assets/styles/checkbox.css">
-    <link rel="stylesheet" href="../assets/styles/passgen.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/checkbox.css">
+    <link rel="stylesheet" href="assets/styles/passgen.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    {% include header.html %}
     <div class="container" id="content" ng-controller="PasswordGeneratorController">
       <div class="copyPasswordRow">
         <div id="copyPassword" class="copyPasswordCell">
-            <button id="copyPasswordButton" class="btn" type="button" data-clipboard-target="#newPassword" tooltip="{% raw %}{{dynamicTooltip}}{% endraw %}" tooltip-placement="bottom" tooltip-trigger="mouseenter" ng-click="changeTooltip()">
+            <button id="copyPasswordButton" class="btn" type="button" data-clipboard-target="#newPassword" tooltip="{{dynamicTooltip}}" tooltip-placement="bottom" tooltip-trigger="mouseenter" ng-click="changeTooltip()">
               <span class="glyphicon glyphicon-copy"></span>
             </button>
         </div>
         <div class="copyPasswordCell">
-          <pre id="newPassword" class="form-group-lg" select-on-click>{% raw %}{{newPassword}}{% endraw %}</pre>
+          <pre id="newPassword" class="form-group-lg" select-on-click>{{newPassword}}</pre>
         </div>
       </div>
       <div class="panel-group">
