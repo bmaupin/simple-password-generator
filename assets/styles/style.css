@@ -16,3 +16,9 @@ body {
 .navbar-right {
   float: right!important;
 }
+
+/* Disable navbar brand hover colour change (https://stackoverflow.com/a/23092923/399105) */
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  background-color: transparent;
+  color: #999999;
+}
