@@ -5,16 +5,17 @@ body {
 
 /* Don't collapse navbar on smaller screens (https://stackoverflow.com/a/23536146/399105) */
 .navbar-collapse.collapse {
-  display: block!important;
+  display: block !important;
 }
-.navbar-nav>li, .navbar-nav {
+.navbar-header>li, .navbar-header, .navbar-nav>li, .navbar-nav {
   float: left !important;
+  margin: 0;
 }
 .navbar-nav.navbar-right:last-child {
   margin-right: -15px !important;
 }
 .navbar-right {
-  float: right!important;
+  float: right !important;
 }
 
 /* Disable navbar brand hover colour change (https://stackoverflow.com/a/23092923/399105) */
